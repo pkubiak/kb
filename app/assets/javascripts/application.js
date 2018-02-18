@@ -1,3 +1,7 @@
+//= require jquery/dist/jquery.js
+//= require popper.js/dist/umd/popper.js
+//= require bootstrap/js/dist/util.js
+//= require bootstrap/js/dist/dropdown.js
 //= require markdown-it/dist/markdown-it.js
 // require highlight.js/lib/highlight.js
 // require highlight.js/lib/languages/javascript.js

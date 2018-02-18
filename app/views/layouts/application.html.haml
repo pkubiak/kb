@@ -1,7 +1,9 @@
 !!! html
 %html
   %head
-    %title KB
+    %title
+      = yield :title
+      \- Knowledge Base
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
@@ -31,6 +33,66 @@
               %button.btn.btn-outline-secondary{type: 'button'} Search
           %hr
           Menu
+          %nav.nav-menu
+            %ul.fa-ul
+              %li
+                %a{href: '#'} Spis tematów
+              %li
+                %span.fa-li
+                  %i.far.fa-file
+                %a{href: '#'} Rejestracja
+              %li
+                %a{href: '#'} Moduły
+                %ul.fa-ul
+                  %li
+                    %span.fa-li
+                      %i.fas.fa-link
+                    %a{href: '#'} Moduł Przetargów
+                    %ul.fa-ul
+                      %li
+                        %a{href: '#'} Słowa kluczowe
+                      %li
+                        %a{href: '#'} Opcje wyszukiwania
+                      %li
+                        %a{href: '#'} Uwagi ogólne
+                  %li
+                    %span.fa-li
+                      %i.fas.fa-lock
+                    %a{href: '#'} Moduł Analizatora
+                  %li
+                    %span.fa-li
+                      %i.fas.fa-lock
+                    %a{href: '#'} Moduł Ogłoszeń Sektorowych
+                  %li
+                    %span.fa-li
+                      %i.fas.fa-lock
+                    %a{href: '#'} Moduł Realizacji
+                  %li
+                    %span.fa-li
+                      %i.fas.fa-angle-right
+                    %a{href: '#'} Moduł Orzeczeń KIO
+              %li
+                %span.fa-li
+                  %i.fas.fa-angle-right
+                %a{href: '#'} Panel klienta
+              %li
+                %span.fa-li
+                  %i.fas.fa-angle-right
+                %a{href: '#'} Płatności
+              %li
+                %span.fa-li
+                  %i.fas.fa-angle-right
+                %a{href: '#'} Często zadawane pytania
+              %li
+                %span.fa-li
+                  %i.fas.fa-angle-right
+                %a{href: '#'} Wskazówki użytkownika
+              %li
+                %span.fa-li
+                  %i.fas.fa-angle-right
+                %a{href: '#'} Zgłaszanie błędów
+
+
           %hr
 
           %h5 Links
