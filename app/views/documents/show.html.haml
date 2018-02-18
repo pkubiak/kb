@@ -1,17 +1,21 @@
 %div.card
   %div.card-body
+    = breadcrumbs(@hierarchy)
 
     %div.mb-2.d-flex.justify-content-between.align-items-center
       %h2.mb-0= @document.title
-      %a.btn.btn-sm.btn-secondary{href: '#'} Edit
+      -# %a.btn.btn-sm.btn-secondary{href: '#'} Edit
+      %a.btn.btn-outline-secondary{href: '#'}
+        %i.fas.fa-cog.fa-fw
+    %div{style: 'font-size: 0.9em; opacity: 0.7'}
+      %i.fas.fa-calendar-alt.ml-2
+      10 Oct 2013
+      %i.fas.fa-history.ml-2
+      7 revisions
+      %i.far.fa-clock.ml-2
+      less than 1 minute read
+    %hr.mt-2
 
-    %nav
-      %ol.breadcrumb
-        %li.breadcrumb-item
-          %a{href: '#'} Home
-        %li.breadcrumb-item
-          %a{href: '#'} Library
-        %li.breadcrumb-item.active Bookshelf
 
 
     %div.text-wrap.markdown

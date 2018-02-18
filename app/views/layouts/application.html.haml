@@ -5,19 +5,54 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-    %link{rel: 'stylesheets', href: 'https://fonts.googleapis.com/css?family=Quattrocento+Sans' }
+    %link{rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Quattrocento+Sans' }
+    %link{rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.6/css/all.css'}
+    %link{rel: 'stylesheet', href:'//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css'}
+    %script{src: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js'}
   %body
-    %div.pt-4.bg-primary{style: 'padding-bottom:64px;'}
+    %div.pt-4.bg-primary#header{style: 'padding-bottom:64px;'}
       %div.mx-auto.d-flex.justify-content-between.align-items-center{style: 'width: 960px'}
         %h1.text-light
-          %i.fas.fa-graduation-cap
+          %i.fas.fa-fw.fa-graduation-cap#logo{onclick: 'random_logo()'}
+          -# %img{src: 'https://mnslab.pl/assets/images/app_logo.svg', style: 'height:128px'}
           Knowledge Base
         %nav
-          %a.btn.btn-light{href: '#'} Contact
+          %a.btn.mr-1.btn-light{href: '#'} About
+          %a.btn.mr-1.btn-light{href: '#'} Write
+          %a.btn.mr-1.btn-light{href: '#'} Configure
           %a.btn.btn-light{href: '#'} Sign-in
 
     %div.d-flex.align-items-start.mx-auto{style: 'width: 960px; margin-top:-48px'}
-      %div.card.mr-2{style: 'width: 280px; flex-shrink: 0'}
+      %div.card.mr-2{style: 'width: 300px; flex-shrink: 0'}
         %div.card-body
+          %div.input-group.input-group-sm.mb-3
+            %input.form-control{type: 'text', placeholder: 'Search knowledge base...'}
+            %div.input-group-append
+              %button.btn.btn-outline-secondary{type: 'button'} Search
+          %hr
           Menu
-      %div= yield
+          %hr
+
+          %h5 Links
+          %ul.fa-ul
+            %li
+              %span.fa-li
+                %i.fas.fa-link
+              %a{href: '#'} List icons can
+            %li
+              %span.fa-li
+                %i.fas.fa-link
+              %a{href: '#'} List icons can
+            %li
+              %span.fa-li
+                %i.fas.fa-link
+              %a{href: '#'} List icons can
+
+      %div
+        = yield
+        %div.mx-auto.text-center.pt-4{style: 'opacity:0.5;letter-spacing:1px; font-size: 0.8em;'}
+          2018 -
+          %a{href: 'https://github.com/pkubiak/kb'}
+            %i.fab.fa-github-alt
+            pkubiak / kb
+          \- Knowledge Base
