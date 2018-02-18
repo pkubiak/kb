@@ -1,0 +1,27 @@
+%div.card
+  %div.card-body
+
+    %div.mb-2.d-flex.justify-content-between.align-items-center
+      %h2.mb-0= @document.title
+      %a.btn.btn-sm.btn-secondary{href: '#'} Edit
+
+    %nav
+      %ol.breadcrumb
+        %li.breadcrumb-item
+          %a{href: '#'} Home
+        %li.breadcrumb-item
+          %a{href: '#'} Library
+        %li.breadcrumb-item.active Bookshelf
+
+
+    %div.text-wrap.markdown
+      = @document.content
+
+    %hr
+
+    %nav.d-flex.justify-content-between
+      %div.text-left
+        %a.btn.btn-pill.btn-outline-primary{href: '#'} Previous
+
+      %div.text-right
+        %a.btn.btn-pill.btn-outline-primary{href: '#'} Next
