@@ -8,12 +8,16 @@
       %a.btn.btn-outline-secondary{href: '#'}
         %i.fas.fa-cog.fa-fw
     %div{style: 'font-size: 0.9em; opacity: 0.7'}
-      %i.fas.fa-calendar-alt.ml-2
-      10 Oct 2013
-      %i.fas.fa-history.ml-2
-      7 revisions
-      %i.far.fa-clock.ml-2
-      less than 1 minute read
+      %span
+        %i.fas.fa-calendar-alt.ml-2
+        10 Oct 2013
+      %span
+        %i.fas.fa-history.ml-2
+        7 revisions
+      %span
+        %i.far.fa-clock.ml-2
+        = t('datetime.distance_in_words.less_than_x_minutes', count: @document.reading_time)
+        read
     %hr.mt-2
 
 
